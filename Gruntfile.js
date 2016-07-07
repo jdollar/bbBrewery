@@ -39,6 +39,12 @@ module.exports = function(grunt) {
           dest: getBuildDir() + '/render'
         },
         {
+          expand: true,
+          cwd: 'resources',
+          src: ['**/*'],
+          dest: getBuildDir() + '/resources'
+        },
+        {
           cwd: '.',
           src: ['index.html'],
           dest: getBuildDir() + '/'
@@ -47,7 +53,10 @@ module.exports = function(grunt) {
           expand: true,
           cwd: 'config',
           src: [getUsernameConfigFile()],
-          dest: getBuildDir() + '/dist/config/'
+          dest: getBuildDir() + '/dist/config/',
+          rename: function(dest) {
+            return dest + 'config.json'
+          }
         }]
       }
     },

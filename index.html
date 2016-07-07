@@ -5,8 +5,8 @@
     <link rel="stylesheet" href="https://sky.blackbaudcdn.net/skyux/1.6.5/css/sky-bundle.css" integrity="sha384-0qQTcXi3TFJvyqm3IBveZiYW0GHbY8LuphtukDr6FkZdy6FEXIHdQ6yF6Z3GUbvK" crossorigin="anonymous">
   </head>
   <body>
-    <div>
-      <bb-tile-dashboard bb-tiles="[{id: 'default', view_name: 'breweryFinder', collapsed: false, collapsed_small: true}]" bb-layout="one_column_layout" bb-tile-dashboard-all-collapsec="false"></bb-tile-dashboard>
+    <div ng-controller="TilesDashboardCtrl as dashboardCtrl">
+      <bb-tile-dashboard bb-tiles="tiles" bb-layout="one_column_layout" bb-tile-dashboard-all-collapsec="false"></bb-tile-dashboard>
     </div>
     <script type="text/ng-template" id="bbInterview/breweryFinder.html">
       <bb-tile bb-tile-header="'Brewery Finder'">
@@ -18,6 +18,9 @@
 
     <script src="https://sky.blackbaudcdn.net/skyux/1.6.5/js/sky-bundle.min.js" integrity="sha384-k7P0PBgMDLGPxfjjmRyNJHObG6Xw8fGgwj8xkTIAqK573wx+0hM6LsaJygwNJdua" crossorigin="anonymous"></script>
     <script src="dist/app.js"></script>
-    <script src="dist/welcomeCtrl.js"></script>
+    <script src="dist/TilesDashboardCtrl.js"></script>
+    <script src="dist/BrewDetailCtrl.js"></script>
+    <script src="dist/ConfigService.js"></script>
+    <script src="dist/LocationService.js"></script>
   </body>
 </html>
