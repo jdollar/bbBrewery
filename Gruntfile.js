@@ -33,6 +33,12 @@ module.exports = function(grunt) {
           dest: getBuildDir() + '/dist'
         },
         {
+          expand: true,
+          cwd: 'partials',
+          src: ['**/*'],
+          dest: getBuildDir() + '/render'
+        },
+        {
           cwd: '.',
           src: ['index.html'],
           dest: getBuildDir() + '/'

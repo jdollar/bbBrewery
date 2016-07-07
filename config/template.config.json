@@ -1,3 +1,4 @@
 {
-  "api_key": "toss_in_the_api_key_here"
+  "api_key": "toss_in_the_api_key_here",
+  "build_dir": "path/to/build/dir/from/Gruntfile/Dir"
 }
