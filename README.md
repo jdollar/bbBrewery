@@ -15,7 +15,7 @@ To setup the local environment run the following:
 
 ```
 npm install
-npm init
+grunt init
 ```
 
 After running 'npm init' it will create a user specific config.json file under config/USERNAME.config.json. The placeholder values in that config.json file will need to be updated. In particular the build directory and the app key that you will be using with the proxy server.
