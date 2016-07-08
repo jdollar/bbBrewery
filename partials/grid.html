@@ -1,3 +1,9 @@
 <div>
-  <select ng-options="state as state.name for state in states track by state.name" ng-model="selected" ng-change="getBreweryList({{selected}})"></select>
+  <select ng-options="state as state.name for state in states track by state.name" ng-model="selected.state" ng-change="getBreweryList()"></select>
+  <bb-grid bb-grid-options="breweryDetails">
+    <div class="bb-filters-inline">
+      Test   
+    </div>
+  </bb-grid>
 </div>
+

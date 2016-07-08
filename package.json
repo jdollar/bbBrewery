@@ -5,7 +5,7 @@
   "main": "app.js",
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1",
-    "start": "grunt build"
+    "start": "grunt build && node server.js"
   },
   "author": "jdollar",
   "license": "MIT",
@@ -14,5 +14,11 @@
     "grunt-contrib-clean": "^1.0.0",
     "grunt-contrib-copy": "^1.0.0",
     "grunt-contrib-jshint": "^1.0.0"
+  },
+  "dependencies": {
+    "express": "^4.14.0",
+    "install": "^0.8.1",
+    "npm": "^3.10.3",
+    "request": "^2.72.0"
   }
 }

@@ -70,7 +70,7 @@ module.exports = function(grunt) {
       all: {
         options: {asi: true},
         files: {
-          src: ['Gruntfile.js', 'lib/**/*.js', 'test/**/*.js']
+          src: ['Gruntfile.js', 'lib/**/*.js', 'test/**/*.js', 'server.js']
         }
       }
     },
