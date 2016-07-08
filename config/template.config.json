@@ -1,5 +1,6 @@
 {
   "api_key": "toss_in_the_api_key_here",
   "build_dir": "path/to/build/dir/from/Gruntfile/Dir",
+  "base_proxy_url": "http://joelthecodemonkey.com:3000",
   "base_api_url": "http://api.brewerydb.com/v2"
 }

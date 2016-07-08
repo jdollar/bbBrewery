@@ -4,9 +4,11 @@ module.exports = function(grunt) {
   grunt.loadNpmTasks('grunt-contrib-copy')
   grunt.loadNpmTasks('grunt-contrib-jshint')
   grunt.loadNpmTasks('grunt-contrib-clean')
+  grunt.loadNpmTasks('grunt-json-generator')
 
   var username = process.env.USER || process.env.USERNAME
   var buildDir = ''
+  var configJson = JSON.parse(fs.readFileSync('config/' + getUsernameConfigFile()))
 
   grunt.initConfig({
     pkg: grunt.file.readJSON('package.json'),
@@ -48,15 +50,6 @@ module.exports = function(grunt) {
           cwd: '.',
           src: ['index.html'],
           dest: getBuildDir() + '/'
-        },
-        {
-          expand: true,
-          cwd: 'config',
-          src: [getUsernameConfigFile()],
-          dest: getBuildDir() + '/dist/config/',
-          rename: function(dest) {
-            return dest + 'config.json'
-          }
         }]
       }
     },
@@ -74,6 +67,14 @@ module.exports = function(grunt) {
         }
       }
     },
+    json_generator: {
+      build: {
+        dest: getBuildDir() + '/dist/config/config.json',
+        options: {
+          base_proxy_url: configJson.base_proxy_url
+        }
+      }
+    },
   })
 
   grunt.task.registerTask('check_config', function() {
@@ -85,7 +86,7 @@ module.exports = function(grunt) {
   })
 
   grunt.task.registerTask('init', ['copy:init'])
-  grunt.task.registerTask('build', ['check_config', 'clean', 'jshint:all', 'copy:build'])
+  grunt.task.registerTask('build', ['check_config', 'clean', 'jshint:all', 'copy:build', 'json_generator:build'])
 
   function getUsernameConfigFile() {
     return username + '.config.json'
