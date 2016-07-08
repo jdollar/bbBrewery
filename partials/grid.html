@@ -1,10 +1,17 @@
 <div>
-  <select ng-options="state as state.name for state in states track by state.name" ng-model="selected.state" ng-change="getBreweryList()"></select>
-  <bb-grid bb-grid-options="breweryDetails">
-  </bb-grid>
+  <div class="row">
+    <label class="col-md-3">State Selection:</label><select class="col-md-9" ng-options="state as state.name for state in states track by state.name" ng-model="selected.state" ng-change="getBreweryList()"></select>
+    <br>
+  </div>
+  <div class="row">
+    <bb-grid bb-grid-options="breweryDetails">
+    </bb-grid>
+  </div>
 </div>
 <script type="text/ng-template" id="bbInterview/iconTemplate.html">
-  <img src="{{rowData.brewery.images.icon}}"/>
+  <div class="text-center">
+    <img src="{{rowData.brewery.images.icon}}"/>
+  </div>
 </script>
 
 
