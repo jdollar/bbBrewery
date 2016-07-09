@@ -14,20 +14,37 @@ app.use(function(req, res, next) {
   next()
 })
 
-app.get('/api', function(req, res) {
-  request(baseApiUrl + getParamString(req.originalUrl), function(error, response, body) {
+app.all('*', function(req, res) {
+  request(getApiUrl(req), function(error, response, body) {
     passThrough(res, body)
   })
 })
-
-app.get('/locations', function(req, res) {
-  request(baseApiUrl + '/locations' + getParamString(req.originalUrl), function(error, response, body) {
-    passThrough(res, body)
-  })
-})
+//app.get('/api', function(req, res) {
+//  request(getApiUrl(req), function(error, response, body) {
+//    passThrough(res, body)
+//  })
+//})
+//
+//app.get('/locations', function(req, res) {
+//  request(getApiUrl(req), function(error, response, body) {
+//    passThrough(res, body)
+//  })
+//})
+//
+//app.get('/breweries', function(req, res) {
+//  request(getApiUrl(req), function(error, response, body) {
+//    passThrough(res, body)
+//  })
+//})
 
 app.listen(3000)
 console.log('server is running')
+
+function getApiUrl(req) {
+  var url = baseApiUrl + req.path + getParamString(req.originalUrl)
+  console.log(url)
+  return url
+}
 
 function getParamString(url) {
   paramsString = '?key=' + apiKey

@@ -1,0 +1,10 @@
+#overlay {
+  height: 100vh;
+  min-height: 100%;
+  min-width: 100%;
+}
+
+body {
+  margin: 0;
+  padding: 0;
+}

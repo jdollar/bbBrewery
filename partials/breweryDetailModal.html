@@ -1,0 +1,28 @@
+<div>
+  <bb-modal>
+    <bb-modal-header>Brewery Details - {{::breweryDetails.nameShortDisplay}}</bb-modal-header>
+    <!--<leaflet lf-center="center" event-broadcast="events" markers="markers" height="480px" width="100%"></leaflet>-->
+    <bb-grid bb-grid-options="grid.beerGrid">
+    </bb-grid>
+    <div bb-modal-body>
+      <div ng-controller="TilesDashboardCtrl as dashboardCtrl">
+        <bb-tile-dashboard bb-tiles="breweryDetailTiles" bb-layout="one_column_layout" bb-tile-dashboard-all-collapsed="false"></bb-tile-dashboard>
+      </div>
+    </div>
+  </bb-modal>
+</div>
+
+<script type="text/ng-template" id="bbInterview/labelTemplate.html">
+  <div class="text-center">
+    <img ng-src="{{rowData.labels.icon}}"/>
+  </div>
+</script>
+
+<!--<script type="text/ng-template" id="bbInterview/beerList.html">
+  <bb-tile bb-tile-header="'Beers'">
+    <div bb-tile-section>
+      <bb-grid bb-grid-options="grid.beerGrid">
+      </bb-grid>
+    </div>
+  </bb-tile>
+</script>-->

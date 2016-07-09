@@ -8,10 +8,17 @@
     </bb-grid>
   </div>
 </div>
+
 <script type="text/ng-template" id="bbInterview/iconTemplate.html">
   <div class="text-center">
-    <img src="{{rowData.brewery.images.icon}}"/>
+    <img ng-src="{{rowData.brewery.images.icon}}"/>
   </div>
 </script>
 
+<script type="text/ng-template" id="bbInterview/linkTemplate.html">
+  <a target="_blank" href="{{rowData.brewery.website}}">{{rowData.brewery.website}}</a>
+</script>
 
+<script type="text/ng-template" id="bbInterview/detailButtonTemplate.html">
+  <button type="button" class="btn btn-primary" ng-click="openDetails(rowData.brewery.id)">Details</button>
+</script>

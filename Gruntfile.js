@@ -50,7 +50,8 @@ module.exports = function(grunt) {
           cwd: '.',
           src: ['index.html'],
           dest: getBuildDir() + '/'
-        }]
+        },
+       ] 
       }
     },
     clean: {

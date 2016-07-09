@@ -3,10 +3,12 @@
   <head>
     <title>Brewery App</title>
     <link rel="stylesheet" href="https://sky.blackbaudcdn.net/skyux/1.6.5/css/sky-bundle.css" integrity="sha384-0qQTcXi3TFJvyqm3IBveZiYW0GHbY8LuphtukDr6FkZdy6FEXIHdQ6yF6Z3GUbvK" crossorigin="anonymous">
+    <!--<link rel="stylesheet" href="http://cdn.leafletjs.com/leaflet-0.7.1/leaflet.css">-->
+    <link rel="stylesheet" href="resources/css/bbInterview.css">
   </head>
-  <body>
+  <body bb-wait="waitingState">
     <div ng-controller="TilesDashboardCtrl as dashboardCtrl">
-      <bb-tile-dashboard bb-tiles="tiles" bb-layout="one_column_layout" bb-tile-dashboard-all-collapsec="false"></bb-tile-dashboard>
+      <bb-tile-dashboard bb-tiles="tiles" bb-layout="layout" bb-tile-dashboard-all-collapsed="false"></bb-tile-dashboard>
     </div>
     <script type="text/ng-template" id="bbInterview/breweryFinder.html">
       <bb-tile bb-tile-header="'Brewery Finder'">
@@ -17,10 +19,14 @@
     </script>
 
     <script src="https://sky.blackbaudcdn.net/skyux/1.6.5/js/sky-bundle.min.js" integrity="sha384-k7P0PBgMDLGPxfjjmRyNJHObG6Xw8fGgwj8xkTIAqK573wx+0hM6LsaJygwNJdua" crossorigin="anonymous"></script>
+    <!--<script src="http://cdn.leafletjs.com/leaflet-0.7.1/leaflet.js"></script>
+    <script src="lib/angular-leaflet-directive.min.js"></script>-->
     <script src="dist/app.js"></script>
     <script src="dist/TilesDashboardCtrl.js"></script>
     <script src="dist/BrewDetailCtrl.js"></script>
+    <script src="dist/BrewModalCtrl.js"></script>
     <script src="dist/ConfigService.js"></script>
     <script src="dist/LocationService.js"></script>
+    <script src="dist/BreweryService.js"></script>
   </body>
 </html>
