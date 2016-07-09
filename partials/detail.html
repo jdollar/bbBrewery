@@ -1,0 +1,19 @@
+<div class="text-center">
+  <img ng-src="https://maps.googleapis.com/maps/api/staticmap?center={{map.latitude}},{{map.longitude}}&size={{map.size}}&markers={{map.latitude}},{{map.longitude}}&key=AIzaSyDtZ4NfxPWAZOGIlPjlSRztdGGSUIG3oZ4"/>
+</div>
+<div ng-controller="BeerModalCtrl" class="text-center">
+  <bb-tile bb-tile-header="tileHeader">
+    <div bb-tile-section>
+      <div ng-controller="BeerModalCtrl" class="text-center">
+          <bb-grid bb-grid-options="grid.beerGrid"></bb-grid>
+      </div>
+
+    </div>
+  </bb-tile>
+</div>
+
+<script type="text/ng-template" id="bbInterview/labelTemplate.html">
+  <div class="text-center">
+    <img ng-src="{{rowData.labels.icon}}"/>
+  </div>
+</script>

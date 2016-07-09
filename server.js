@@ -19,23 +19,6 @@ app.all('*', function(req, res) {
     passThrough(res, body)
   })
 })
-//app.get('/api', function(req, res) {
-//  request(getApiUrl(req), function(error, response, body) {
-//    passThrough(res, body)
-//  })
-//})
-//
-//app.get('/locations', function(req, res) {
-//  request(getApiUrl(req), function(error, response, body) {
-//    passThrough(res, body)
-//  })
-//})
-//
-//app.get('/breweries', function(req, res) {
-//  request(getApiUrl(req), function(error, response, body) {
-//    passThrough(res, body)
-//  })
-//})
 
 app.listen(3000)
 console.log('server is running')
