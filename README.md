@@ -18,7 +18,7 @@ npm install
 grunt init
 ```
 
-After running 'npm init' it will create a user specific config.json file under config/USERNAME.config.json. The placeholder values in that config.json file will need to be updated. In particular the build directory and the app key that you will be using with the proxy server.
+After running 'grunt init' it will create a user specific config.json file under config/USERNAME.config.json. The placeholder values in that config.json file will need to be updated. In particular the build directory and the app key that you will be using with the proxy server.
 
 After setting up the config.json run the following to deploy the clientside angular app and start the express server:
 
