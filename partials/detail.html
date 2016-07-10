@@ -1,5 +1,39 @@
 <div class="text-center">
-  <img ng-src="https://maps.googleapis.com/maps/api/staticmap?center={{map.latitude}},{{map.longitude}}&size={{map.size}}&markers={{map.latitude}},{{map.longitude}}&key=AIzaSyDtZ4NfxPWAZOGIlPjlSRztdGGSUIG3oZ4"/>
+  <bb-tile bb-tile-header="'Details'">
+    <div bb-tile-section>
+      <div class="row well well-sm">
+        <div class="col-md-3">
+          <label>Description:</label>
+        </div>
+        <div class="col-md-9 well-right-value">
+          <label ng-bind="breweryDetails.description"></label>
+        </div>
+      </div>
+      <div class="row well well-sm">
+        <div class="col-md-3">
+          <label>Organic?:</label>
+        </div>
+        <div class="col-md-9 well-right-value">
+          <label ng-bind="breweryDetails.isOrganic"></label>
+        </div>
+      </div>
+      <div class="row well well-sm">
+        <div class="col-md-3">
+          <label>Established:</label>
+        </div>
+        <div class="col-md-9 well-right-value">
+          <label ng-bind="breweryDetails.established"></label>
+        </div>
+      </div>
+    </div>
+  </bb-title>
+</div>
+<div class="text-center">
+  <bb-tile bb-tile-header="'Map'">
+    <div bb-tile-section>
+      <img ng-src="https://maps.googleapis.com/maps/api/staticmap?center={{map.latitude}},{{map.longitude}}&size={{map.size}}&markers={{map.latitude}},{{map.longitude}}&key=AIzaSyDtZ4NfxPWAZOGIlPjlSRztdGGSUIG3oZ4"/>
+    </div>
+  </bb-tile>
 </div>
 <div ng-controller="BeerModalCtrl" class="text-center">
   <bb-tile bb-tile-header="tileHeader">
