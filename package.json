@@ -4,8 +4,9 @@
   "description": "",
   "main": "app.js",
   "scripts": {
-    "test": "./node_modules/karma/bin/karma start bbInterview.conf.js",
-    "start": "grunt build && node server.js"
+    "test": "./node_modules/karma/bin/karma start karma.conf.js",
+    "prestart": "npm test && grunt build",
+    "start": "node server.js"
   },
   "author": "jdollar",
   "license": "MIT",
