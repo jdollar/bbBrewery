@@ -30,7 +30,7 @@ module.exports = function(grunt) {
       build: {
         files: [{
           expand: true,
-          cwd: 'lib',
+          cwd: 'src',
           src: ['**/*'],
           dest: getBuildDir() + '/dist'
         },
@@ -64,7 +64,7 @@ module.exports = function(grunt) {
       all: {
         options: {asi: true},
         files: {
-          src: ['Gruntfile.js', 'lib/**/*.js', 'test/**/*.js', 'server.js']
+          src: ['Gruntfile.js', 'src/**/*.js', 'test/**/*.js', 'server.js']
         }
       }
     },

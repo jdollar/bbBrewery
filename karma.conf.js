@@ -18,8 +18,8 @@ module.exports = function(config) {
       'node_modules/jquery/dist/jquery.min.js',
       'node_modules/blackbaud-skyux/dist/js/sky-bundle.min.js',
       'node_modules/angular-mocks/angular-mocks.js',
-      'lib/app.js',
-      'lib/**/*.js',
+      'src/app.js',
+      'src/**/*.js',
       'test/**/*.js'
     ],
 
